@@ -13,7 +13,7 @@ jobs:
 
     # Overwrite this pipeline with the template in common-pipelines.
     - set_pipeline: self
-      file: common-pipelines/container/pipeline.yml
+      file: common-pipelines/container/pipeline-external-repository.yml
       var_files:
         - pipeline-config/ci/vars.yml
 
