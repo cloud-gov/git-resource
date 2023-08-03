@@ -1,2 +1,3 @@
-# All empty by default. See ../README.md#Usage for details.
-oci-build-params: {}
+oci-build-params:
+  # todo replace with private base image
+  BUILD_ARG_base_image: "ubuntu:22.04"
