@@ -1,3 +1,3 @@
-oci-build-params:
-  # todo replace with private base image
-  BUILD_ARG_base_image: "ubuntu:22.04"
+base-image: ubuntu
+base-image-tag: "22.04"
+oci-build-params: {}
