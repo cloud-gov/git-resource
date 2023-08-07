@@ -13,7 +13,7 @@ jobs:
 
     # Overwrite this pipeline with the template in common-pipelines.
     - set_pipeline: self
-      file: common-pipelines/container/pipeline.yml
+      file: common-pipelines/container/pipeline-external-repository.yml
       var_files:
         - pipeline-config/ci/vars.yml
 
@@ -23,7 +23,7 @@ resources:
   type: git
   source:
     uri: https://github.com/cloud-gov/common-pipelines
-    branch: pipeline-config-repo
+    branch: main
     commit_verification_keys: ((cloud-gov-pgp-keys))
 
 # The repository containing pipeline configuration. Set 'pipeline-config-repo' in Credhub.
@@ -31,5 +31,5 @@ resources:
   type: git
   source:
     uri: https://github.com/((pipeline-config-repo))
-    branch: build-upstream
+    branch: main
     commit_verification_keys: ((cloud-gov-pgp-keys))
